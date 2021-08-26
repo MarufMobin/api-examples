@@ -42,6 +42,15 @@
             border-radius: 20px;
             cursor: pointer;
         }
+        .btn{
+            padding: 30px 45px;
+            color: cornsilk;
+            background-color: darkblue;
+            font-size: 32px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+        
     </style>
 </head>
 <body>
@@ -49,17 +58,19 @@
         <div class="center-div">
             
             <h1>Kanye West Queto</h1>
+            <!-- <blockquote id="quoto">
+                Show New Quotos 
+            </blockquote>   -->
             <blockquote id="quoto">
                 Show New Quotos 
             </blockquote>  
             
             <div style="text-align: center;">
-                <button id="quoto-btn">New Quoto</button>
+                <button id="quoto-btn" onclick="loadData()">New Quoto</button>
+                <button class="btn" onclick="changePage()">Goto Next Page</button>
             </div>
         </div> 
     </section>
-    
-
     <script src="js/kanye.js"></script>
 </body>
 </html>
