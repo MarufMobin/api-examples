@@ -1,0 +1,98 @@
+/* index page css write here */
+h1{
+    text-align: center;
+    font-size: 64px;
+    line-height: 85px;
+}
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#quoto{
+    font-size: 42px;
+    background-color: rgb(145, 175, 229);
+    box-shadow: 1px 3px 20px #333;
+    border-radius: 15px;
+    padding: 60px;
+    color: #fff;
+}
+#quoto::before{
+    content: "“ ";
+    position: relative;
+    font-size: 60px;
+}
+#quoto::after{
+    content: " ”";
+    position: relative;
+    font-size: 60px;
+}
+#quoto-btn{
+    padding: 30px 45px;
+    color: cornsilk;
+    background-color: darkblue;
+    font-size: 32px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.btn{
+    padding: 30px 45px;
+    color: cornsilk;
+    background-color: darkblue;
+    font-size: 32px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* index page css end here */
+.countries-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.country{
+    border: 2px solid tomato;
+    padding: 20px;
+    margin: 10px auto;
+    border-radius: 10px;
+    width: 25%;
+    text-align: center;
+}
+
+.country-detail{
+    padding: 12px 15px;
+    font-size: 18px;
+    border-radius: 15px;
+    background-color: rgb(235, 169, 157);
+    border: 2px solid rgb(235, 169, 157);
+    color: #fff;
+    cursor: pointer;
+    transition: 1s ease-in-out;
+}
+.country-detail:hover{
+    background-color: rgb(233, 126, 107);
+    border: 2px solid rgb(233, 126, 107);
+    color: #fff;
+    cursor: pointer;
+}
+
+.country-details{
+    border: 2px solid tomato;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    width: 600px;
+    display: flex;
+    flex-direction: row;
+}
+.img{
+    width: 200px;
+    margin-right: 50px;
+}
+.name{
+   display: block;
+   
+}
+.pepole{
+display: block;
+   
+}
