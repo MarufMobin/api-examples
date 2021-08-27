@@ -17,11 +17,27 @@
         <input type="text" class="form-control py-2" placeholder="Search Your Favourate Food" aria-label="Recipient's username" aria-describedby="button-addon2" id="input-field">
         <button class="btn btn-outline-secondary" type="button" id="button-search" onclick="searchButton()">Search</button>
       </div>
+      <!-- meal search area -->
+      <!-- pre loader -->
+      <div class="d-flex justify-content-center">
+        <div class="spinner-border" role="status" id="preloader">
+          <span class="visually-hidden"></span>
+        </div>
+      </div>
+      <!-- pre loader -->
+      <!-- show Details -->
+      <div class="container">
+        <div class="row">
+            <div id="details-container">
+          </div>
+        </div>
+      </div>
+      <!-- show Details -->
       <!-- meal search Result start-->
         <div class="container mb-5">
             <div class="row">
-                <div id="search-container" class="row row-cols-1 row-cols-md-3 g-4">
-                </div>
+              <div id="search-container" class="row row-cols-1 row-cols-md-3 g-4">
+              </div>
             </div>
         </div>
       <!-- meal search Result end-->
@@ -31,3 +47,8 @@
     <script src="js/mealdb.js"></script>
   </body>
 </html>
+
+
+
+
+ 
