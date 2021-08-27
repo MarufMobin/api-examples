@@ -5,6 +5,8 @@ const searchButton = () => {
    fetch(url)
    .then( res => res.json())
    .then( result => displaySearchResult(result.meals))
+
+   searchField.value = '';
 }
 
 // searchButton()
@@ -15,10 +17,11 @@ const displaySearchResult = meals => {
     preloader.style.display = 'none';
     
     const searchContainer = document.getElementById('search-container');
+    searchContainer.textContent = '';
 
     meals.forEach( meal => {
+
         const div =  document.createElement('div');
-       
         div.classList.add('col');
         div.innerHTML =`
         <div class="card h-100" style="cursor: pointer;" onclick="loadMoreDetails('${meal.idMeal}')">
@@ -30,6 +33,7 @@ const displaySearchResult = meals => {
         </div>
         `;
         searchContainer.appendChild(div);
+
     })
 };
 
@@ -46,6 +50,8 @@ const displayMoreDetails = ( data ) =>{
 // console.log()
     // const imgUrl = data
     const detailsContainer = document.getElementById('details-container');
+    detailsContainer.textContent = '';
+
     const div = document.createElement('div');
     div.textContent = '';
     div.innerHTML = `
