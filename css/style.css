@@ -1,4 +1,7 @@
 /* index page css write here */
+.preloader{
+    text-align: center;
+}
 h1{
     text-align: center;
     font-size: 64px;
@@ -35,12 +38,14 @@ section {
     border-radius: 20px;
     cursor: pointer;
 }
+
 .btn{
     color: cornsilk;
     background-color: darkblue;
-    font-size: 32px;
+    font-size: 22px;
     border-radius: 20px;
     cursor: pointer;
+    /* padding: 30px 45px; */
 }
 
 /* index page css end here */

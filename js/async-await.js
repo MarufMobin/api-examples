@@ -1,10 +1,15 @@
-const searchButton = () => {
+const searchButton = async () => {
     const searchField =  document.getElementById('input-field');
     const searchText = searchField.value;
     const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchText}`;
-    fetch(url)
-    .then( res => res.json())
-    .then( result => displaySearchResult(result.meals))
+
+    const res = await fetch(url);
+    const data = await res.json();
+    displaySearchResult(data.meals)
+    // fetch(url)
+    // .then( res => res.json())
+    // .then( result => displaySearchResult(result.meals))
+
     searchField.value = '';
  }
  
@@ -37,12 +42,16 @@ const searchButton = () => {
  };
  
  
- const loadMoreDetails = id => {
+ const loadMoreDetails = async id => {
      
      const url = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`;
-     fetch(url)
-     .then( res => res.json())
-     .then( data => displayMoreDetails(data.meals[0]))    
+    const res = await fetch(url);
+    const data = await res.json();
+    displayMoreDetails(data.meals[0]);
+    //  fetch(url)
+    // .then( res => res.json())
+    // .then( data => displayMoreDetails(data.meals[0]))  
+  
  }
  
  const displayMoreDetails = ( data ) =>{

@@ -1,4 +1,8 @@
 const searchButton = () => {
+
+    const preloader = document.getElementById('preloader');
+    preloader.classList = "remove";
+    preloader.classList.add("preloader")
    const searchField =  document.getElementById('input-field');
    const searchText = searchField.value;
    const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchText}`;
@@ -20,7 +24,6 @@ const displaySearchResult = meals => {
     searchContainer.textContent = '';
 
     meals.forEach( meal => {
-
         const div =  document.createElement('div');
         div.classList.add('col');
         div.innerHTML =`
@@ -49,9 +52,9 @@ const loadMoreDetails = id => {
 const displayMoreDetails = ( data ) =>{
 // console.log()
     // const imgUrl = data
+    window.scrollTo(0,40)
     const detailsContainer = document.getElementById('details-container');
     detailsContainer.textContent = '';
-
     const div = document.createElement('div');
     div.textContent = '';
     div.innerHTML = `
